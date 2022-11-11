@@ -1,0 +1,398 @@
+<h1>React Interview </h1>
+<h4>1.What is virtual Dom ?</h4>
+<p>Virtual Document Object Model.Dom represent web page as a tree structure .Any piece of html that we writes is added to a node, to this tree. With JS, we can access any of these nodes(html elements) and update their styles, attributes etc    
+React, behind the scenes, creates an entires copy of the actual DOM of the app/project. Any manipulation done in the data (DOM tree node) will only re-render that particular node in the actual DOM instead of re-rendering the entire actual DOM. it saves time and only updates what is needed. It improves efficiency</p>
+
+<p>
+    DOM manipulation is very expensive 	DOM manipulation is very easy 
+    There is too much memory wastage 	No memory wastage 
+    It updates Slow                  	It updates fast
+    It can directly update HTML   	    It can't update HTML directly 
+    Creates a new DOM if the element updates.	Update the JSX if the element update 
+    It allows us to directly target any specific
+    node (HTML element)	It can produce about 200,000 Virtual DOM
+    Nodes / Second.
+    It represents the Ul of your application	It is only a virtual representation of the DOM</p>
+    <table border="1" > 
+        <tr>
+            <th>Real DOM</th>
+            <th>Virtual DOM</th>
+        </tr>
+        <tr>
+            <td>1.DOM manipulation is very expensivetd</td>
+            <td>1.DOM manipulation is very easy </td>
+        </tr>
+        <tr>
+            <td>2.There is too much memory wastage</td>
+            <td>2.No memory wastage </td>
+        </tr>
+        <tr>
+            <td>3.It updates Slow </td>
+            <td>3.It updates fast</td>
+        </tr>
+            
+        <tr>
+            <td>4.It can directly update HTML  </td>
+            <td>4.It can't update HTML directly </td>
+        </tr>
+        <tr>
+            <td>5. Creates a new DOM if the element updates.</td>
+            <td>5.Update the JSX if the element update</td>
+        </tr>
+        <tr>
+            <td>6.It allows us to directly target any specific
+                node (HTML element)</td>
+            <td>6.It can produce about 200,000 Virtual DOM
+                Nodes / Second.</td>
+        </tr>
+        <tr>
+            <td>7.It represents the Ul of your application</td>
+            <td>7.It is only a virtual representation of the DOM</td>
+        </tr>
+       
+    </table>
+
+<h4>2.What is SPA ?</h4>
+<p>SPA stands for Single Page App. it is a web application that instead of using the default method of loading new pages completely, it takes new data from the webserver by interacting with the web browser and refreshes the current page.it is fast and easy to update.Also, only one html file is used for a react app, therfore a single page app. Using react-router domt, we feel that the app consists of different pages but only one HTML file is used.</p>
+<h4>3.What is difference between class and functional component ?</h4>
+<ul>
+    <li>
+        A Functional Component is plain JavaScript pure function that accepts props as arguments and returns a React element(jsx)
+        A Class Component requires you to extend from the React.Component and create a render function which returns a React element
+    </li>
+    <li>
+        Function Components do not have a render function. A class components needs a render function to display contents on webpage
+    </li>
+    <li>
+        Functional Components are stateless components as they simply accept data and display them in some form, that are maintl responsible for rendering UI.
+        Class Components are called stateful components because they implement states
+    </li>
+    <li>
+        React lifecycle methods cannot be used in functional components. React lifecycle methods can be used inside Class Component(for eg componentDidMount )
+    </li>
+    <li>
+        Hooks can be used in functional component to make them stateful for eg(useState)
+        in Class component we need to use the constructor function and super function 
+    </li>
+    <li>
+        Functional components do not have constructors. Class components use constructors to store the state
+    </li>
+</ul> <br>
+<h4>4.What do you mean by state and its use in react?</h4>
+<p>
+    State is a react object that is used to contain data or information about the component. 
+    A component state can change over time, whenver it changes the component re-renders. 
+    The state object is initilized in the constructor. states are mutable.
+    a state object can store multiple properties. this.setState() is used to change the value of the state object. this function performs a shallow merge between the new and previous state.
+</p> 
+<h4>5.What is JSX and why do we use it instead of js?</h4>
+<p>
+    JSX stands for JavaScript Xml. JSX allows us to write HTML elements in JavaScript and place them in the DOM without using any createElement and appendChild() methods.
+    JSX converts html tags into react elements.
+    It is not mandatory to use jsx but it makes it easiers to write react applications.
+</p>
+<h4>6.What is package.json</h4>
+<p>
+    The package.json file is installed when we create a react app. it is the heart of any React Project.
+    it contains all the metadata and dependencies of the application. 
+    This is a required file to run the react application.
+
+    A package.json file lists the packages your project needs and specifies the version of a package that your project can use
+</p>
+
+<a href="https://ankithashettigar.github.io/React-IP1/" target="_blank">React-IP1</a>
+
+
+<h4>1.What is the Difference between react and react native? Which one is library or framework?</h4>
+<p>
+    React is an Javscript library used to develop the user interface for web applications. React Js is made up of two parts - first are the components that it comprises and second is the HTML document where all the components will be rendered.
+  </p>
+  <p>
+    React Native is a framework used for creating mobile application for iOS, Android and Windows. It uses only Javascript to build the corss-platform mobile app. It targets mobile browsers instead for the webpage.
+  </p>
+  <ul type='circle'>
+    <li>
+      ReactJs was released in 2013 and it is used for developing web applications. React Native was released in 2015 and is used to build mobile applications.
+    </li>
+    <li>
+      ReactJs uses Javascript library and CSS for styling and animations. React Natvie has an in-built animation library.
+    </li>
+    <li>
+      ReactJs uses the React-Router for navigating throught webpages. React Native has an in-built navigation library used to navigate in mobile apps
+    </li>
+    <li>
+      In ReactJs, the virtual DOM renders the browser code. In React Native, the API is used to render mobile applications.
+    </li>
+    <li>
+      ReactJS uses HTML tags and React Native does not use HTML tags.
+    </li>
+  </ul>
+</li> 
+<h4>2.What is the package name you are using for routing ?</h4>
+<p>
+    The React-Router is a React library used for routing. It allows the navigation among different web pages in a React application, allows changing the browser URL, and keeps the UI in sync with the URL.
+    This package provides the core functionality for both , react-router-dom and react-router-native.
+    While using the React-Router, we should import directly from the react-router-dom and NOT the React-Router. This is because react-router-dom helps use to re-export everything from react-router
+  </p>
+
+  <h4>3.Routing Implementation</h4>
+  <h4>4.How do you switch/navigate form one component to another in React?</h4>
+  <p>There are various approaches in React to navigate from one component to another</p>
+          <ul>
+            <li>
+              Using React Router - installing the react-router-dom, installs a react-router library, "BrowserRouter", "Routes" and "Route" that helps us create the navigation between different webpages.
+              The Route component will contain path where we should specify the url path, to where it should direct us on clicking the Link. The "Link" should be pasted in the components and have the same URL as mentioned in the "Route"
+            </li>
+
+            <li>
+              Using window.open - The open() method of the Window interface loads a specified resource into a new or existing browsing context (that is, a tab, a window, or an iframe) under a specified name.
+              The syntax is window.open(url, target)
+            </li>
+            <li>
+              The useNavigate Hook - The useNavigate hook returns a function that lets you navigate programmatically. This Hook can be used only in functional components and has two signatures - first is wither pass a "to" value(similar to "Link") , second is pass the data you want to go in the history stack.
+            </li>
+          </ul>
+    <h4>5.What is lazy loading in react ?</h4>
+    <p>
+        lazy loading means that a component or a part of code must get loaded when it is required. It is also referred to as code splitting and data fetching.
+
+       Talking about React specifically, it bundles the complete code and deploys all of it at the same time. Now, usually, that's not a bad idea, since React SPAs (Single page application) are quite small and do not affect the performance. But what if we have a gigantic application, like a content management system with a customer portal, admin portal etc. In such a case, it does not seem like a smart idea to load the complete application.
+
+        It will be a huge application and will cost a lot of unnecessary data transfer which can lead to slow loading of the website.
+        A customer login, will not have access to admin specific features, so loading it is a waste of memory and time.
+        In this post, I will try to explain the advantages of lazy loading and how to implement it in React.
+    </p>
+    <h4>6.Difference b/w Stateful and stateless Component</h4>
+    <p>
+        Class components are considered stateful components because they implment state. We can use a state within a class compoent and the this.setState() function is used to change/manipulate the value of the state. On the other hand, functional components,
+        do not allow states and are therefore stateless. React Hooks can be used to implement state in the functional component eg. useState()
+      </p>
+
+<a href="https://react-ip-2.netlify.app/" target="_blank">React-IP2</a>
+
+
+      <h4>1.Difference between Axios and fetch</h4>
+      <ul>
+        <li>
+          With Axios, the data is sent through the data property of the options, and in Fetch API uses the body property
+        </li>
+        <li>
+          Axios is a stand-wlone third party package that can be easilt installed, on the other hand, fetch is built in and no installation is required
+        </li>
+        <li>
+          Axios data contains the object whereas Fetch's body needs to be stringified
+        </li>
+        <li>
+          The URL is provided to Fetch as an argument , whereas in Axios it is set in the options object.
+        </li>
+        <li>
+          Axios performs automatic transforms of JSON data, but fetch is a two-step process when handling JSON data, first to make the actual request and second to call the .json() mtheod upon response.
+        </li>
+      </ul>
+      <h4>2.What is UseState Hook ?(Implementation)</h4>
+      <p> The useState hook is a special function that takes the initial state as an argument and returns an array of two entries. so basically useState is the ability to encapsulate local state in a functional component. </p>
+      <h4>3.What is useEffect Hook ?(Implementation)</h4>
+      <p>useEffect Hook is to eliminate the side-effects of using class-based components. For example, tasks like updating the DOM, fetching data from API end-points, setting up subscriptions or timers, etc</p>
+      <h4>4.What is UseReducer Hook ?(Implementation)</h4>
+      <p>An alternative to useState. Accepts a reducer of type (state, action) => newState, and returns the current state paired with a dispatch method.</p>
+      <p>useReducer is usually preferable to useState when you have complex state logic that involves multiple sub-values or when the next state depends on the previous one. </p>
+
+      <h4>5.How do you pass data from parent to child</h4>
+      <p>Data can be passed from the parent to the child component via props. Any properties of the parent component, be it variables or functions alike, can be passed to the child component as props.</p>
+
+      
+      <pre>
+            import React from 'react'
+
+            export default function Parent() {
+            
+            const data = "Data from Parent"
+                return (
+                <div>
+                    <Child 
+                    transfer = {data}
+                    />
+                </div>
+            )
+            }
+
+            export const Child = ({transfer}) =>{
+                return(
+                    <div>
+                        {transfer}
+                    </div>
+                )
+              }
+      </pre>
+
+    <a href="https://react-interview-day3.netlify.app/" target="_blank">React-IP3</a>
+
+     <h4>1. What is UseRef Hook ?(Implementation)</h4>
+     <p>useRef returns a mutable ref object whose .current property is initialized to the passed argument (initialValue). The returned object will persist for the full lifetime of the component.</p>
+     <p>useRef is like a “box” that can hold a mutable value in its .current property.</p>
+     <p>useRef() creates a plain JavaScript object. The only difference between useRef() and creating a {current: ...} object yourself is that useRef will give you the same ref object on every render.useRef doesn't notify you when its content changes.Mutating the .current property doesn't cause a re-render. </p>
+     <p>If you want to run some code when React attaches or detaches a ref to a DOM node, you may want to use a callback ref instead.</p>
+     <h4>2.What is UseMemo Hook ?(Implementation)</h4>
+     <p>Returns a memoized value.
+        Pass a “create” function and an array of dependencies. useMemo will only recompute the memoized value when one of the dependencies has changed. This optimization helps to avoid expensive calculations on every render.        
+        Remember that the function passed to useMemo runs during rendering. Don't do anything there that you wouldn't normally do while rendering. For example, side effects belong in useEffect, not useMemo.        
+        If no array is provided, a new value will be computed on every render.</p>
+     <h4>3.What is Context api</h4>
+     <p>
+        React Context API allows us to share data from one component and solves the problem of props drilling. 
+        Context API helps us avoid sending data through various intermediate layers of components, and by using context api, the context will recieve props indirectly by creating a global variable that can be passed to other components.
+        Firstly, we need to create a context, which we can later use to create providers and consumers.
+        The Provider provides the data/state to its children. It will store the data and be the parent of all the components. The Consumer is the conmponent that consumes and uses the state.
+      </p>
+     <h4>4.What are React Life cycles Explain each one with Example</h4>
+     <p>
+        A class component undergoes 3 main lifecycles stages namely, mounting phase, updating phase and unmounting phase.
+        In the mounting phase, the elements are inserted into the DOM. React uses the virtual DOM to put all the elements into the memory. It has four build-in methods to mount a component
+        <ul>
+          <li>Constructor()</li>
+          <li>getDerivedStateFromProps()</li>
+          <li>Render()</li>
+          <li>ComponentDidMount</li>
+        </ul>
+
+        if the component is updated(state or props change), then it enters the updating phase. The updating phase has 5 methods
+        <ul>
+          <li>getDerivedStateFromProps</li>
+          <li>ShouldComponentUpdate</li>
+          <li>render()</li>
+          <li>getsnapshotBeforeUpdate()</li>
+          <li>ComponentDidUpdate()</li>
+        </ul>
+
+        Finally, the unmounting phase is the end of the component lifecycle. Component is removed from the DOM. it has one method which is the ComponentWillUnmount
+      </p>
+     <h4>5.What is Props Drilling Concept ?What is State Uplifting ?</h4>
+     <p>
+        React developes encounter scenorios where they must pass data from a top level component to a deeple nested component. This refers to transporting the data as props to the intended component via various intermediate components.
+        This method is very inefficient and slow. We pass data through components that do not require it, making our code complex and difficult to maintain.
+
+        The solution to props drilling is either using Redux or Context api.
+        <ul>
+          <li>Redux is a React library that allows us to store data in a store(as objects) and any component that needs this data can get it from the store.</li>
+          <li>Context api returns us a provider and consumer. Provider provides the data and consumer recieves the data</li>
+        </ul>
+
+        in React, sharing state is accomplished by moving it up to the closest common ancestor of the components that need it. This is called “lifting state up”
+      </p>
+     <h4>6.Difference between useEffect and useContext ?</h4>
+     <ul>
+        <li>
+          UseEffect Hook is used to replicate lifecycle methods in a class component. We can consider useEffect Hook as componentDidMount, componentDidUpdate and componentWillUnmount. The Useffect returns us a function which will be executed when its dependencies re-renders.  
+        </li>
+        <li>
+        Context API is a suite of API features that provides a mutable, global state data structure to hook into components at any point throughout the component tree, thus preventing a React.js anti-pattern known as prop drilling. useContext Hook helps use implement the context api
+        </li>
+      </ul>
+     <h4>7.Difference between callback and useCallback Hook ?</h4>
+     <ul>
+        <li>useCallback is a react hook that returns a memorized callback when passed a function and a list of dependencies that set the parameters. It's useful when a component is passing a callback to its child component in order to prevent rendering. It only changes the callback when one of its dependencies is changed</li>
+        <li>A callback is a function passed as an argument to another function. This technique allows a function to call another function. A callback function can run after another function has finished.</li>
+      </ul>
+
+      <a href="https://react-interview-day4.netlify.app/" target="_blank">React-IP4</a>
+
+    <h4>1.High Order Component in react js ?</h4>
+    <p>High Order Components(HOC) were inspired by High Order Functions. HOC takes another component as arguments, and returns an upgrades component.
+        HOC is used for reusing component logic or rather used for sharing logic across multiple components without the necessity to rewrite it in every component.
+      </p>
+    <h4>2.Do you know about SEO ? Is it true that react js supports SEO support</h4>
+    <p>SEO - Search Engine Optimization, can be described as the process of enhancing your site to increase its visibilty when people search for products or services related to your webpages or websites.
+        The better the visibilty of your webpage, the more traffic it will attract to your webpage.
+        Most of the Search Engines, use bots that collects data of various webpages in the web and store the data in a index(library). If anyone searches for something and the keywords match any index, all the webpages will be dsiplayed according to the rankings.
+      </p>
+      <p>
+        React is SEO friendly but has some challenges. in React, JS constructs the DOM on runtime i.e. when we open the webpage for the first time, JS executes the code and displays elements on the webpage. SEO prefers to have content already included inside the html response.
+
+      </p>
+    <h4>3.clean up in useEffect</h4>
+    <p>useEffect allows us to manage component lifecycles with a functional component. This hooks tells React to perform an action after a render. Well, there are some side effects, we should clean up before the component unmounts as if we
+        fail to do this, it will lead to memory leak eg. cleaning up subscriptions, event listeners. The cleanup function in the useEffect Hook helps us clean any subscriptions, setintervals before the component unmounts.
+      </p>
+    <h4>4.What is the use of useCallback and useMemo</h4>
+    <ul>
+        <li>
+          The useMemo Hook allows us to memorize a computed value between renders. This hook takes in two arguments - the work that has to be performed and list of dependencies.
+          During Mount, when the component is rendered for the first time, React will invoke this function to run the logic, calculate the logic. Whatever is returned from the useMemo function is assigned to the variable.
+          After every render, useMemo does a shallow comparison between the value of the variable before the render and after the render, and if the value is same, it will not re-render and display the previous calculated value.
+        </li>
+        <li>
+          useCallback is similar to useMemo, but useCallback is used for functions instead of arrays and objects. Functions are compared by reference, not by value i.e. if we define a function with our components, it will re-execute on every single render, producing an identical function every time. useCallback helps us avid this, but remembering the funcntion and avoiding re-render if it is the same and not changed.
+        </li>
+      </ul>
+    <h4>5.Why do we need keys in react?</h4>
+    <p>
+        keys are props that are passed in child elements of a list and help us identify which items have changed , are added or deleted.
+        It serves as an identification of an element. Keys plays an important role in the diffing algorithm.
+       </p>
+    <h4>6.Do you know about redux</h4>
+    <p>
+        Redux is a JS library used to manage appliation state and prevent props drilling. It helps us manage state through unidirectional data flow model. it allows for a good React architecture.
+        React has 3 main components
+        <ul>
+        <li>Store - A store is a place where the entire state of your application list. it manages and stores data of the application and has a dispatch function.</li>
+        <li>Action - Action is dispatched which are read by reducers. it is a pure object created to store the information of the user's events</li>
+
+      <li>Reducer - reducer reads the dispatch action and then updates the store via the state accordingly. Its a pure function to return a new state from the inital state.</li>  
+        </ul> 
+      </p>
+   
+      <a href="https://react-interview-day5.netlify.app/" target="_blank">React-IP5</a>
+
+      <h4>1.What is an event in react?</h4>
+      <p>Just like HTML DOM events, React can perform actions based on events. An Event is an action that can be triggered upon user action or system generated event e.g clicking on a button, loading of a webpage, pressing a key etc.
+        Event handlers are what makes it possible for users interact with your app.
+      </p>
+      <p>The React onClick event handler enables you to call a function and trigger an action when a user clicks an element, such as a button, in your app. Event names are written in camelCase, so the onclick event is written as onClick in a React app. In addition, React event handlers appear inside curly braces.</p>
+      <h4>2.What is memory leak and how to overcome?</h4>
+      <p>
+        Every React Compponent has 3 main lifecycle methods namely, Mounting, Updating and Unmounting. In Mouting phase, the component is inserted into the DOM and displayed on the webpage and in the Unmounting phase the component is removed from the DOM.
+        Any timers, network requests, setintervals, subscriptions etc what were created in the mounting phase, should be cleaned or cnacelled before unmounting. If we fail to do so, then that subscription will be stored in the memory and now we will have unimportant data in our app which is not accessible.
+        If this process is repeated several times, useful memory will be filled up with unwanted data which can hamper its performance or crahs the system.
+        in functional component, we use useEffect Hook to access the lifecycle methods, we can use the useEffect clean up function, which helps us clean up subscirptions and asynchrnour tasks.
+      </p>
+      <h4>3.Do you prefer function-based or class component and why ?</h4>
+      <p>The real answer to this question is - It is your personal choice. Neither the Functional Component nor class component is better than the other, both have pros and cons. But ideally it is recommended to use the Functional Component as it is more concise, leading to cleaner and less complex code.</p>
+      <ul>
+        <li>
+          <strong>Component Rendering</strong>
+          In Class components , the render() methos is used for rendering the JSX by extending from React.Component. A Fucntional component is a plain JS function that takes in props as arguments and returns a jsx element. A functional compoenent does not require the render() function.
+        </li>
+        <li>
+          <strong>Handling Props</strong>
+          in Class Components this.props is used to access our name props. In Functional components we take sinel props as arguments(or prop names) and access them in '{}' either as props.name or the prop name directly. In Functional Component we do not need to worry about the "this" keyword
+        </li>
+
+        <li>
+          <strong>Handling State</strong>
+          in Class Components, we use the constructor function & super function to intialize the state values. In Functional Components state is implemented usind the useState() Hook. In Function Component , we do not need to use the "this.state" to manipulate the state and also a constructor function is not needed
+        </li>
+
+        <li>
+          <strong>Lifecycle Methods</strong>
+          A class components has lifecycle methods whereas in function component, we use the useEffect hook to implement lifecycle methods. The useEffect is confusing because we use the same Hook for all lifecycle methods. In class components, we can directly use the methods we want e.g. componentDidMount
+        </li>
+      </ul>
+      <h4>4.Explain reducer as pure function in redux</h4>
+      <p>Reducers are functions that take the current state and an action as arguments, and return a new state result. In other words, (state, action) => newState.</p>
+      <ul>
+        <h5>Rules of Reducers</h5>
+        <li>They should only calculate the new state value based on the state and action arguments</li>
+      <li>They are not allowed to modify the existing state. Instead, they must make immutable updates, by copying the existing state and making changes to the copied values.</li>
+      <li>They must not do any asynchronous logic or other "side effects"</li>
+      </ul>
+      <h4>5.Why do we use redux thunk?</h4>
+      <p>
+        Thunk us a  redux middleware. It allows us to return functions instead of objects from redux actions. Plain redux doesn't allow complex logic inside action functions, you can only perform simple synchronous updates by dispatching actions. This middleware extends its ability and lets you write complex logic that interacts with the store. Thunk doesn't interfere with the action until it returns a function. Thunk allows us to dispatch actions manually, which gives us the power to incorporate some logic or run some asynchronous code before dispatching an action. The function returned from action is called a thunk function which is called with two arguments :  <br />
+
+        1. dispatch: It is a method used to dispatch actions, that can be received by reducers.  <br />
+        2. getState: It gives access to store inside the thunk function.
+        </p>
+      <h4>6.What do you know about NPM?</h4>
+      <p>NPM is a node package manager. It helps us install, uninstall or remove packages that are essential for our application. All the packages/modules of the React are node packages, so we use npm for adding/installing pacakages or modules for our react application.</p>
+    
+    <a href="https://react-interview-day6.netlify.app/" target="_blank">React_IP6</a>
